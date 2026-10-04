@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+/*
+介面隔離原則
+說明:
+	- 客戶端不應被迫依賴它不需要的介面。
+	- 與其建立大而全的介面，不如建立多個小而精的介面。
+*/
+
 type Print interface {
 	Print(value string) error
 }

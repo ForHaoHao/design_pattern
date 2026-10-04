@@ -8,10 +8,10 @@ import "fmt"
 	- 每個類別或模組只做一件事，並把它做好。這樣當需求變更時，修改的影響範圍會很小。
 */
 // Email 服務
-type EmailService struct{}
+type EmailValidate struct{}
 
-func (e *EmailService) Send() error {
-	fmt.Printf("Send email to user.\n")
+func (e *EmailValidate) Validate() error {
+	fmt.Printf("Validate user email.\n")
 	return nil
 }
 
@@ -24,8 +24,8 @@ func (u *UserRepository) Save() error {
 }
 
 func main() {
-	e := &EmailService{}
-	e.Send()
+	e := &EmailValidate{}
+	e.Validate()
 
 	u := &UserRepository{}
 	u.Save()
